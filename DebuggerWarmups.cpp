@@ -2,17 +2,21 @@
  * someone reading them for the first time. In this case, though, it's a space
  * for you to write down answers to the three questions asked in this section.
  *
- * Q1:
+ * Q1:It once came to pass that Cherokee syllabary inventor Sequoyah was polishing the mirrors
+ *  on the James Webb Space Telescope. when, without warning, (Lasha) saved the Island of
+ *  Meroe from a black hole by setting up an elaborate diversion. THE END!
  *
  *
  *
  *
- * Q2:
+ * Q2:Program When I launched Stack overflows without a debugger program just crashed and it gave
+    me an error message.
  *
  *
  *
  *
- * Q3:
+ * Q3:The cycle of the recursive calls is: 896 -> 412 -> 719 -> 692 -> 153 ->
+    722 -> 161
  *
  *
  *
@@ -28,7 +32,7 @@ using namespace std;
 /* TODO: Fill this in with your name before reading the story. Otherwise
  * you'll get the wrong story!
  */
-const string MyName = "(Your Name Here)";
+const string MyName = "(Lasha)";
 
 namespace {
     void theEnd() {
