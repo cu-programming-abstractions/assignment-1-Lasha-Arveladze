@@ -8,12 +8,16 @@
 using namespace std;
 
 string onlyConnectize(string phrase) {
-    /* TODO: The next few lines just exist to make sure you don't get compiler
-     * warning messages when this function isn't implemented. Delete this
-     * comment and the next few lines, then implement this function.
-     */
-    (void) phrase;
-    return "";
+    if (phrase.empty()) return "";
+
+    char firstChar = toupper(phrase[0]);
+    string rest = onlyConnectize(phrase.substr(1));
+
+    if (isalpha(firstChar) && !(firstChar == 'A' || firstChar == 'E' || firstChar == 'I' || firstChar == 'O' || firstChar == 'U')) {
+        return firstChar + rest;
+    } else {
+        return rest;
+    }
 }
 
 
@@ -33,6 +37,18 @@ PROVIDED_TEST("Converts lower-case to upper-case.") {
     EXPECT_EQUAL(onlyConnectize("lowercase"), "LWRCS");
     EXPECT_EQUAL(onlyConnectize("uppercase"), "PPRCS");
 }
+
+PROVIDED_TEST("Hangles the numbers"){
+    EXPECT_EQUAL(onlyConnectize("323223."), "");
+    EXPECT_EQUAL(onlyConnectize("9123102"), "");
+}
+
+PROVIDED_TEST("Handles the symbols") {
+    EXPECT_EQUAL(onlyConnectize("{}|><"), "");
+    EXPECT_EQUAL(onlyConnectize("++++"), "");
+}
+
+
 
 /* TODO: You will need to add your own tests into this suite of test cases. Think about the sorts
  * of inputs we tested here, and, importantly, what sorts of inputs we *didn't* test here. Some
